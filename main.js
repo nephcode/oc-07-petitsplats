@@ -2,6 +2,7 @@ import './style.css'
 import javascriptLogo from '/images/common/javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+//import { footer } from './js/layout/footer.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -11,6 +12,7 @@ document.querySelector('#app').innerHTML = `
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
+   
     <h1>Petits Plats DEV</h1>
     <div class="card">
       <button id="counter" type="button"></button>
@@ -22,3 +24,5 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+//document.querySelector('footer').innerHTML = footer
