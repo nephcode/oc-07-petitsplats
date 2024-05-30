@@ -5,13 +5,31 @@
 <!-- ∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴ -->
 
 # INSTALL
+Install `Bun` with Homebrew on Mac (By Nepha Code) For Neah
+
+````
+brew tap oven-sh/bun
+brew install bun
+````
 
 Install with `Bun`
+
+```
+bun init
+bun add vite
+```
 
 ```
 bun create vite petits-plats --template vanilla
 ```
 
-```
-bun init
-```
+
+
+
+````
+bun install
+````
+
+````
+bun run dev
+````
