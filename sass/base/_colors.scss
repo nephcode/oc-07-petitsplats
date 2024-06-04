@@ -3,18 +3,27 @@
 //==================================== By Neah =================2024==//
 
 // Colors Global -- --------------------------------------------------//
-$backgroundSite: #ffffff !default;
-$backgroundFooter: #353535 !default;
-$backgroundGlobalElement: #9356dc !default;
+$backgroundSite: #EDEDED !default;
+$backgroundFooter: #1b1b1b !default;
+$backgroundGlobalElement: #FFD15B !default;
 $colorGreyBackground : #FAFAFA;
 
 // Colors Components ------------------------------------------------//
-$colorMain : #901C1C;
-$colorSecondary : #D3573C;
-$colorTernary : #DB8876;
+$colorMain : #FFD15B;
+$colorSecondary : #FFD15B;
+$colorTernary : #7A7A7A;
+$colorComboBox : #FFFFFF;
+$colorComboHover : #FFD15B;
+$colorComboSelected : #FFD15B;
+$colorComboIconBack : #1b1b1b;
+$colorComboIconsymbol : #FFFFFF;
+
+
 
 // Colors Typo ------------------------------------------------------//
-$colorTypoGrey : #757575;
-$colorTypoGreyBis :#312E2E;
-$colorTypoBlack : #000;
-$colorTypoWhite : #fff;
+$colorGrey : #7A7A7A;
+$colorBlack : #000000;
+$colorTitle : #000000;
+$colorText : #1B1B1B;
+$colorWhite : #fff;
+$colorCombo : #7A7A7A;
