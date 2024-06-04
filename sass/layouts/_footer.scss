@@ -1,5 +1,22 @@
-//============================================= OC-06 FiS!!EyE =======//
+//========================================= OC-07 Petits plats =======//
 // _FOOTER ===========================================================//
-//==================================== By Neah =================2024==//
-
+//=============================== By Nepha Code =============== 2024 =//
 @use "../base/colors";
+@use "../base/typo";
+
+footer {
+    font-family: typo.$fontDefault;
+    color: colors.$colorMain;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    color: colors.$colorWhite;
+    background-color: colors.$backgroundFooter;  
+    height: 40px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+
+}
