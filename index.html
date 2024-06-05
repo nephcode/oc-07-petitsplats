@@ -1,63 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/common/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./js/main.js" defer></script>
+    <title>Les petits plats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Manrope:wght@200..800&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/images/common/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="module" src="./js/main.js" defer></script>
-  <title>Les petits plats</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Manrope:wght@200..800&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <div id="logo">
-      <a class="logo" href="/">
-        <img alt="logo" src="/public/images/common/logo.svg">
-      </a>
-    </div>
-    <div class="header-title">
-      <h1>CHERCHEZ PARMI PLUS DE 1500 RECETTES
-        DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h1>
-      <div class="main-search-bar-container">
-        <input id="main-search-bar" class="search-bar" placeholder="Rechercher une recette, un ingrédient, ..." />
-        <div id="loop" class="loop-container">
-          <img src="/public/images/common/loop.svg" alt="loop" />
-        </div>
-        <img class="delete" src="/assets/x.svg" alt="delete" />
+  <body>
+    <header>
+      <div id="logo">
+        <a class="logo" href="/">
+          <img alt="logo" src="/public/images/common/logo.svg" />
+        </a>
       </div>
-    </div>
-  </header>
-  <main>
-    <section id="filter" aria-label="Filtrez les recettes" role="filter">
-      <div id="filter-container">
-        <div id="ingredients-filter">
-          <h4>Ingrédients</h4>
-          <div class="filter-content"></div>
+      <div class="header-title">
+        <h1>
+          CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET
+          DÉLICIEUSES
+        </h1>
+        <div class="main-search-bar-container">
+          <input
+            id="main-search-bar"
+            class="search-bar"
+            placeholder="Rechercher une recette, un ingrédient, ..."
+          />
+          <div id="loop" class="loop-container">
+            <img src="/public/images/common/loop.svg" alt="loop" />
+          </div>
+          <img class="delete" src="/assets/x.svg" alt="delete" />
         </div>
-        <div id="appliance-filter">
-          <h4>Appareil</h4>
-          <div class="filter-content"></div>
+      </div>
+    </header>
+    <main>
+      <section id="filter" aria-label="Filtrez les recettes" role="filter">
+        <div id="filter-container">
+          <div id="filter-ingredient" class="filterbox">
+            <button>
+              <h4>Ingrédients</h4>
+              <div class="filter-content"></div>
+            </button>
+          </div>
+          <div id="filter-device" class="filterbox">
+            <button>
+              <h4>Appareil</h4>
+              <div class="filter-content"></div>
+            </button>
+          </div>
+          <div id="filter-tool" class="filterbox">
+            <button>
+              <h4>Ustensiles</h4>
+              <div class="filter-content"></div>
+            </button>
+          </div>
         </div>
-        <div id="ustensils-filter">
-          <h4>Ustensiles</h4>
-          <div class="filter-content"></div>
-        </div>     
-    </section>
-    <section id="recipes-container">
-     
-    </section>
-  </main>
-  <footer>
-    <p>
-      © 2024 Petits Plats — OC 07 - JS Search Engine
-    </p>
-  </footer>
-</body>
-
+        <div id="countRepice"><span>50 Recettes</span></div>
+      </section>
+      <section id="tagsearch">
+        <div class="tag">
+          <button>
+            <div class="tag__name"><span>Crème de coco</span></div>
+            <div aria-controls="button" role="combobox" class="tag__close"><img src="/images/common/cross.svg" alt="cross" /></div>
+          </button>
+        </div>
+      </section>
+      <section id="recipes">
+        <div id="recipes-container"></div>
+    </main>
+    <footer>
+      <p>© 2024 Petits Plats — OC 07 - JS Search Engine</p>
+    </footer>
+  </body>
 </html>

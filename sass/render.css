@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Manrope:wght@200..800&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 /*
 
 .repice_section {
@@ -284,6 +285,12 @@
   color: #FFD15B;
 }
 
+#recipes, #tagsearch, #filter {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
 #recipes-container {
   display: flex;
   justify-content: space-between;
@@ -291,11 +298,11 @@
   gap: 6px;
 }
 #recipes-container .card {
-  margin-top: 55px;
+  margin: 55px 0px 0px;
   width: 380px;
   height: 731px;
   border-radius: 21px;
-  background: white;
+  background: #FFFFFF;
   box-shadow: 0px 4px 34px 30px rgba(0, 0, 0, 0.04);
   position: relative;
 }
@@ -389,6 +396,39 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.tag {
+  min-width: 120px;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #FFD15B;
+  color: #000000;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.tag__name {
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tag__close {
+  width: 14px;
+  height: 14px;
+}
+.tag__close img {
+  height: 100%;
+}
+.tag button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background-color: #FFD15B;
 }
 
 *,
@@ -488,21 +528,24 @@ header .header-title .main-search-bar-container .delete {
 
 #filter {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
-  background-color: #FFD15B;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+}
+#filter #filter-container {
+  display: flex;
+  flex-direction: row;
+}
+#filter #countRepice {
+  font-family: "anton";
+  font-size: 1.5rem;
+  color: #000000;
 }
 #filter h4 {
   color: #FFD15B;
+  background-color: #FFFFFF;
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
@@ -527,19 +570,9 @@ header .header-title .main-search-bar-container .delete {
   border-radius: 5px;
   border: none;
 }
-#filter form button {
-  width: 80%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #FFD15B;
-  color: #FFFFFF;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
 
 footer {
-  font-family: "Anton", sans-serif;
+  font-family: "Manrope", sans-serif;
   color: #FFD15B;
   display: flex;
   flex-direction: row;
