@@ -3,6 +3,13 @@
 //==================================== By Nepha =============== 2024 =//
 @use "../base/colors";
 
+#recipes, #tagsearch, #filter{
+    display: flex;
+    //justify-content: center;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+
 #filter {
   display: flex;
   flex-direction: row;
@@ -15,6 +22,7 @@
   #filter-container {
     display: flex;
     flex-direction: row;
+    gap:40px;
   }
 
   #countRepice {
@@ -23,34 +31,14 @@
     color: colors.$colorBlack;
   }
 
-  h4 {
-    color: colors.$colorMain;
-    background-color: colors.$colorComboBox;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
+  
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-    input {
-      width: 80%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    select {
-      width: 80%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-    }
-  }
+#recipes_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+  margin-top: 50px;
+  align-items: stretch;
+  justify-content: center;
 }

@@ -4,17 +4,17 @@
 
 // BASE ------------------------------------------------------------- //
 @use 'base/colors';
-// @use 'base/typo';
+@use 'base/typo';
 
 // BASE ------------------------------------------------------------- //
-//@use 'components/button';
+
 @use 'components/card';
 @use 'components/buttons';
 
 // GLOBAL & HEADER -------------------------------------------------- //
 @use 'layouts/global';
 @use 'layouts/header';
-//@use 'layouts/loader';
+
 // MAIN ------------------------------------------------------------- //
 
 @use 'pages/home';
