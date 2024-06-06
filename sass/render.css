@@ -75,11 +75,9 @@
 #recipes-container {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(380px, auto));
   gap: 20px;
-  align-items: stretch;
-  align-content: space-between;
-  justify-content: center;
+  justify-content: space-between;
 }
 #recipes-container .card {
   margin: 0px 0px 0px;
