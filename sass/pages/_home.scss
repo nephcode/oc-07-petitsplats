@@ -1,0 +1,44 @@
+//============================================= OC-07 ================//
+// _HOME =============================================================//
+//==================================== By Nepha =============== 2024 =//
+@use "../base/colors";
+
+#recipes, #tagsearch, #filter{
+    display: flex;
+    //justify-content: center;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+
+#filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  //width: ;
+
+  #filter-container {
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+  }
+
+  #countRepice {
+    font-family: "anton";
+    font-size: 1.5rem;
+    color: colors.$colorBlack;
+  }
+
+  
+}
+
+#recipes_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+  margin-top: 50px;
+  align-items: stretch;
+  justify-content: center;
+}

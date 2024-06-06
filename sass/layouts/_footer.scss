@@ -1,0 +1,21 @@
+//========================================= OC-07 Petits plats =======//
+// _FOOTER ===========================================================//
+//=============================== By Nepha Code =============== 2024 =//
+@use "../base/colors";
+@use "../base/typo";
+
+footer {
+    // Display system Nepha
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    // Style system Nepha 
+    font-family: typo.$fontDefault;
+    color: colors.$colorMain;
+    background-color: colors.$backgroundFooter;  
+}

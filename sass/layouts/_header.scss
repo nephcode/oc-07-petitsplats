@@ -1,0 +1,111 @@
+//============================================= OC-06 FiS!!EyE =======//
+// _HEADER ===========================================================//
+//==================================== By Neah =================2024==//
+@use "../base/colors";
+
+header {
+    position: relative;
+    height: 667px;
+    background-image: url('/images/common/header_background.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    #logo  {
+        position: absolute;
+        top: 35px;
+        left: 69px;
+
+        a {
+            img {
+                height: 26px;
+            }
+        }
+    }
+
+    .header-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        h1 {
+            font-family: 'Anton';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 66px;
+            text-align: center;
+            color: colors.$colorMain;
+            width: 50%;
+        }
+
+        .main-search-bar-container {
+            position: relative;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+
+            .search-bar {
+                width: 80%;
+                height: 72px;
+                border-radius: 11px;
+                background-color: colors.$colorComboIconsymbol;
+                border: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+                padding-left: 35px;
+
+                color: colors.$colorGrey;
+                font-family: 'Manrope';
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .loop-container {
+                width: 51px;
+                height: 52px;
+                border-radius: 10px;
+                background: colors.$colorBlack;
+                position: absolute;
+                top: 10px;
+                right: 11.3%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    background: colors.$colorMain;
+
+                    svg {
+                        g {
+                            circle {
+                                stroke: colors.$colorBlack;
+                            }
+
+                            line {
+                                stroke: colors.$colorBlack;
+                            }
+                        }
+
+                    }
+                }
+
+
+            }
+
+            .delete {
+                position: absolute;
+                top: 28px;
+                right: 18%;
+                display: none;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+}

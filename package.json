@@ -6,10 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "vite preview"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "vite": "^5.2.11",
+=======
+    "sass": "^1.77.4",
+    "vite": "^5.2.12",
+>>>>>>> main
     "@types/bun": "latest"
   },
   "module": "index.ts",

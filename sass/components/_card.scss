@@ -1,0 +1,238 @@
+//============================================= OC-07 ================//
+// _CARD =============================================================//
+//==================================== By Nepha =============== 2024 =//
+@use "../base/colors";
+
+
+#recipes-container {
+
+  article {
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.15);
+    margin: auto;
+    // padding: 15px;
+    max-width: 380px;
+    max-height: 720px;
+    transition: all 0.3s cubic-bezier(0.49, -0.07, 0.36, 0.92);
+
+    &:hover {
+      transform: scale(1.05);
+      /*z-index: 30;*/
+    }
+  }
+
+  figure {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9fr, 3fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0px;
+
+    a {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      margin: 0px;
+
+      img {
+        aspect-ratio: 4/5;
+        object-fit: cover;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    figcaption {
+      color: colors.$colorMain;
+      grid-column: 1;
+      grid-row: 3fr;
+      min-height: 45px;
+    }
+
+    .heartMedia {
+      grid-column: 2;
+      grid-row: 3fr;
+      display: block;
+      justify-self: end;
+      color: colors.$colorMain;
+
+      &:active {
+        //color: colors.$colorSecondary;
+        animation: circle 0.6s ease-out forwards;
+      }
+    }
+
+
+  }
+}
+
+.artist {
+  &--city {
+    margin: 0px;
+    justify-self: center;
+    color: colors.$colorMain;
+    font-size: 13px;
+  }
+
+  &--tagline {
+    justify-self: center;
+    color: colors.$colorBlack;
+    font-size: 10px;
+  }
+
+  &--price {
+    margin: 0px;
+    justify-self: center;
+    color: colors.$colorGrey;
+    font-size: 9px;
+  }
+}
+
+.time {
+  display: block;
+  position: relative;
+  right: 0;
+  color: colors.$colorMain;
+}
+
+
+
+#recipes-container {
+    width: 100%;
+    display: grid;
+    //grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(auto-fit, minmax(380px, auto));
+    //grid-auto-flow: column;
+    gap: 20px;
+    justify-content: space-between;
+  
+   
+  //  display: flex;
+  //justify-content: space-between;
+  //flex-wrap: wrap;
+  //gap: 20px;
+
+  // .error-message {
+  //     color: $black;
+  //     font-family: Anton;
+  //     font-size: 21px;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     line-height: normal;
+  //     display: flex;
+  //     justify-content: center;
+  //     margin-top: 55px;
+  //     width: 100%;
+  // }
+
+  .card {
+    margin: 0px 0px 0px;
+
+    width: 380px;
+    height: 731px;
+    border-radius: 21px;
+    background: colors.$colorWhite;
+    box-shadow: 0px 4px 34px 30px rgba(0, 0, 0, 0.04);
+    position: relative;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 253px;
+      border-top-left-radius: 21px;
+      border-top-right-radius: 21px;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      padding: 32px 25px;
+
+      h2 {
+        color: colors.$colorBlack;
+        font-family: "Anton";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0;
+      }
+
+      .under-title {
+        color: colors.$colorGrey;
+        font-family: Manrope;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.08px;
+        text-transform: uppercase;
+        margin-top: 29px;
+      }
+
+      p {
+        color: colors.$colorBlack;
+        font-family: "Manrope";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        max-height: 76px;
+        text-align: justify;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+
+      .ingredients-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        div {
+          margin-top: 15px;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+
+          .ingredient-name {
+            color: colors.$colorBlack;
+            font-family: "Manrope";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+
+          .ingredient-quantity {
+            color: colors.$colorGrey;
+            font-family: "Manrope";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    .time {
+      padding: 5px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 14px;
+      background: colors.$colorMain;
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      color: colors.$colorBlack;
+      text-align: center;
+      font-family: 'Manrope';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="Plan-de-travail1" serif:id="Plan de travail1" x="0" y="0" width="92" height="92" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="Plan-de-travail11" serif:id="Plan de travail1" x="0" y="0" width="92" height="92"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g transform="matrix(0.86763,0,0,0.86763,-414.061,41.8502)">
+            <circle cx="530.25" cy="4.783" r="53.018" style="fill:rgb(48,48,48);"/>
+        </g>
+        <g transform="matrix(3.85435,0,0,3.99981,-709.351,-11.6356)">
+            <path d="M195.973,23.431C201.234,23.431 205.396,19.337 205.396,14.41C205.396,9.483 201.234,5.388 195.973,5.388C190.713,5.388 186.551,9.483 186.551,14.41C186.551,19.337 190.713,23.431 195.973,23.431ZM195.973,25.035C202.063,25.035 207,20.278 207,14.41C207,8.541 202.063,3.784 195.973,3.784C189.884,3.784 184.947,8.541 184.947,14.41C184.947,20.278 189.884,25.035 195.973,25.035Z" style="fill:rgb(255,209,91);"/>
+        </g>
+        <g transform="matrix(3.70745,0,0,3.7073,-680.562,-7.42064)">
+            <path d="M195.973,20.224C199.184,20.224 201.787,17.621 201.787,14.41C201.787,11.199 199.184,8.596 195.973,8.596C192.763,8.596 190.16,11.199 190.16,14.41C190.16,17.621 192.763,20.224 195.973,20.224ZM195.973,21.827C200.07,21.827 203.391,18.506 203.391,14.41C203.391,10.313 200.07,6.992 195.973,6.992C191.877,6.992 188.556,10.313 188.556,14.41C188.556,18.506 191.877,21.827 195.973,21.827Z" style="fill:rgb(255,209,91);"/>
+        </g>
+    </g>
+</svg>
