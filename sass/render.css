@@ -189,6 +189,18 @@ button {
   border: none;
 }
 
+.search-button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  align-content: center;
+}
+.search-button img {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
 .tag {
   min-width: 120px;
   max-width: 200px;
