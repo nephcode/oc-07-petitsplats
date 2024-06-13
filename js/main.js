@@ -1,10 +1,25 @@
+// NEPHILIM CODE ==================================================//
+// =====    IMPORTS    ============================================//
+// ================================================================//
+
+// SASS ===========================================================//  
 import '../sass/render.scss'
-import { getRecipes } from './components/api'
-import { recipesContainer } from './components/domLinker'
+// COMPONENTS =====================================================//
+import { recipesContainer } from './components/domLinker';
+import { Api, RecipeApi } from './components/api'; 
+//
+
+// MODELS =========================================================//
+//import { recipes } from './data/recipes'
+//import { getRecipes } from './components/api'
 import { createCard } from './models/card'
+import { Article } from './models/cardneph'
 
-console.log(getRecipes())
+// APP ============================================================//
 
+//export const getRecipes = () => recipes
+//console.log(getRecipes())
+/*
 // const span = document.createElement('span')
 // span.innerHTML = 'test'
 
@@ -15,24 +30,29 @@ data.forEach(item => {
     const card = createCard(item)
     recipesContainer.appendChild(card)
 })
+    */
 //=================================================================
-/*
+
 class App {
     constructor() {
-        this.$moviesWrapper = document.querySelector('.movies-wrapper')
-        this.moviesApi = new MovieApi('/data/movie-data.json')
+        this.recipeSection = document.getElementById('recipes-container');
+        //this.fetcherRecipe = new Api('../data/recipes.json');
+        this.recipeExtract = new ArrayApi('../data/recipes.js');
     }
 
     async main() {
-        const movies = await this.moviesApi.getMovies()
+        const recipesAll = this.recipeExtract.getRecipe()
+        console.log(recipesAll)
+        
+        recipesAll.forEach(article => {
+            console.log(article)
+            //const Card = new Article(article)
+            //this.recipeSection.appendChild(card.displayCard())
 
-        movies.forEach(movie => {
-            const Template = new MovieCard(movie)
-            this.$moviesWrapper.appendChild(Template.createMovieCard())        
-        })    
+        })   
     }
 }
 
 const petitsplats = new App()
 petitsplats.main()
-*/
+//=================================================================//
