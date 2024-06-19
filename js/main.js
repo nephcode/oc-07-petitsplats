@@ -3,31 +3,31 @@
 // ================================================================//
 
 // SASS ===========================================================//  
-import '../sass/render.scss'
+import '../sass/render.scss';
 // COMPONENTS =====================================================//
 import { recipesContainer } from './components/domLinker';
 import { getRecipes } from './components/api'; 
-//
 
 // MODELS =========================================================//
-import { createCard } from './models/card'
-import { Article } from './models/cardneph'
+import { createCard } from './models/card';
 
 // APP ============================================================//
 
-//export const getRecipes = () => recipes
-console.log(getRecipes())
+//console.log(getRecipes());
 
-//const span = document.createElement('span')
- //span.innerHTML = 'test'
+const displayRecipes = data => {
+    //console.log(data); // Vérifier le contenu de data
+    recipesContainer.innerHTML = '';
 
- recipesContainer.appendChild(span)
-const data = getRecipes()
+    data.forEach(item => {
+        //console.log(item); // Vérifier chaque élément de data
+        const card = createCard(item);
+        //console.log(card); // Vérifier le retour de createCard
+        recipesContainer.appendChild(card);
+    });
+}
 
-data.forEach(item => {
-    const card = createCard(item)
-    recipesContainer.appendChild(card)
-})
+displayRecipes(getRecipes());
 
 //=================================================================
 /*
