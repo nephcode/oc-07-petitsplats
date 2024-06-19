@@ -1,8 +1,15 @@
+import { recipes } from '../../data/recipes'
+
+export const getRecipes = () => recipes
+
+/// ======= Je laisse tomber cette partie pour le moment ======= ///
+/*
 export class Api {
+
     /**
      * 
      * @param {string} url 
-     */
+     
     constructor(url) {
         this._url = url
     }
@@ -16,11 +23,11 @@ export class Api {
 }
 
 
-export class RecipeApi extends Api {
+export class JsonApi extends Api {
     /**
      * 
      * @param {string} url 
-     */
+     
     constructor(url) {
         super(url)
     }
@@ -29,3 +36,15 @@ export class RecipeApi extends Api {
         return await this.get()
     }
 }
+
+export class ArrayApi {
+    constructor(dataArray) {
+      this.data = () => recipes;
+    }
+  
+    getData() {
+      return this.data;
+    }
+  }
+
+  */
