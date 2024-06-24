@@ -1,20 +1,28 @@
 // NEPHELIM CODE ==================================================//
-// =====    IMPORTS    ============================================//
-// ================================================================//
+// ===== PROGZ MAIN APP ===========================================//
+// =========================================== NEAH 2024 ==========//
 
 // SASS ===========================================================//  
 import '../sass/render.scss';
-// COMPONENTS =====================================================//
-import { recipesContainer } from './components/domLinker';
+
+// API  ===========================================================//  
 import { getRecipes } from './components/api'; 
+// COMPONENTS =====================================================//
+import {
+    recipesContainer, mainSearchBar, recipesCounter, dropdownIngredients, dropdownIngredientsCollapsed,
+    ingredientsSearchBar, dropdownDevices, dropdownDevicesCollapsed, devicesSearchBar,
+    dropdownUstensils, dropdownUstensilsCollapsed, ustensilsSearchBar
+} from './components/domLinker';
 
 // MODELS =========================================================//
 import { createCard } from './models/card';
-//lol again
+
+import { createItem } from './factory/dropdown';
+
 
 // APP ============================================================//
 
-//console.log(getRecipes());
+console.log(getRecipes());
 
 const displayRecipes = data => {
     //console.log(data); // Vérifier le contenu de data
