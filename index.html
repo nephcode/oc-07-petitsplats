@@ -13,7 +13,6 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <header>
       <div id="logo">
@@ -45,12 +44,12 @@
       <section id="dropdown-container">
         <div id="dropdown-ingredients" class="dropdown">
           <span>Ingrédients</span>
-          <img src="/images/common/arrow.png" alt="arrow">
+          <img src="/images/common/arrow-open.svg" alt="arrow">
           <div class="collapsed">
             <input id="ingredients-search-bar" class="search-bar">
-            <img class="delete" src="/images/common/x.svg" alt="delete" />
+            <img class="delete" src="/images/common/cross.svg" alt="delete" />
             <div class="loop-container">
-              <img src="/images/common/loop_grey.svg" alt="loop" />
+              <img src="/images/common/loop.svg" alt="loop" />
             </div>
             <section class="items-container">
             </section>
@@ -58,12 +57,12 @@
         </div>
         <div id="dropdown-devices" class="dropdown">
           <span>Appareils</span>
-          <img src="/images/common/arrow.png" alt="arrow">
+          <img src="/images/common/arrow-open.svg" alt="arrow">
           <div class="collapsed devices">
             <input id="devices-search-bar" class="search-bar">
-            <img class="delete" src="/images/common/x.svg" alt="delete" />
+            <img class="delete" src="/images/common/cross.svg" alt="delete" />
             <div class="loop-container">
-              <img src="/images/common/loop_grey.svg" alt="loop" />
+              <img src="/images/common/loop.svg" alt="loop" />
             </div>
             <section class="items-container">
             </section>
@@ -71,38 +70,17 @@
         </div>
         <div id="dropdown-ustensils" class="dropdown">
           <span>Ustensiles</span>
-          <img src="/images/common/arrow.png" alt="arrow">
+          <img src="/images/common/arrow-open.svg" alt="arrow">
           <div class="collapsed ustensils">
             <input id="ustensils-search-bar" class="search-bar">
-            <img class="delete" src="/images/common/x.svg" alt="delete" />
+            <img class="delete" src="/images/common/cross.svg" alt="delete" />
             <div class="loop-container">
-              <img src="/images/common/loop_grey.svg" alt="loop" />
+              <img src="/images/common/loop.svg" alt="loop" />
             </div>
             <section class="items-container">
             </section>
-      <section id="filter" aria-label="Filtrez les recettes" role="filter">
-        <div id="filter-container">
-          <div id="filter-ingredient" class="filterbox">
-            <button>
-              <div class="filterbox__name">Ingrédients</div>
-              <div class="filterbox__sort"><img src="/images/common/arrow-open.svg"></div>
-            </button>
-          </div>
-          <div id="filter-device" class="filterbox">
-            <button>
-              <div class="filterbox__name">Appareil</div>
-              <div class="filterbox__sort"><img src="/images/common/arrow-open.svg"></div>
-            </button>
-          </div>
-          <div id="filter-tool" class="filterbox">
-            <button>
-              <div class="filterbox__name">Ustensiles</div>
-              <div class="filterbox__sort"><img src="/images/common/arrow-open.svg"></div>
-            </button>
-          </div>
-        </div>
-        <div id="countRepice"><span>50 Recettes</span></div>
-      </section>
+      
+      <!--
       <section id="tagsearch">
         <div class="tag">
           <button>
@@ -111,8 +89,31 @@
           </button>
         </div>
       </section>
-      <section id="recipes">
-        <div id="recipes-container"></div>
+    -->
+    <section id="filter" aria-label="Filtrez les recettes" role="filter">
+      <div id="filter-container">
+        <div id="filter-ingredient" class="filterbox">
+          <button>
+            <div class="filterbox__name">Ingrédients</div>
+            <div class="filterbox__sort"><img src="/images/common/arrow-open.svg"></div>
+          </button>
+        </div>
+        <div id="filter-device" class="filterbox">
+          <button>
+            <div class="filterbox__name">Appareil</div>
+            <div class="filterbox__sort"><img src="/images/common/arrow-open.svg"></div>
+          </button>
+        </div>
+        <div id="filter-tool" class="filterbox">
+          <button>
+            <div class="filterbox__name">Ustensiles</div>
+            <div class="filterbox__sort"><img src="/images/common/arrow-open.svg"></div>
+          </button>
+        </div>
+      </div>
+      <div id="countRepice"><span>50 Recettes</span></div>
+    </section>
+    <section id="recipes"><div id="recipes-container"></div>
     </main>
     <footer>
       <p>© 2024 Petits Plats — OC 07 - JS Search Engine</p>
