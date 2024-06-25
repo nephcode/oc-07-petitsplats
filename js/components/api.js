@@ -1,8 +1,6 @@
 // NEPHELIM CODE ============================= LULZCODE ===========//
 // ===== API === ^_^ ==============================================//
 // =========================================== NEAH 2024 ==========//
-
-
 import { recipes } from '../../data/recipes'
 import { filterMainSearchBar, isLowerCaseIncluded } from './search'
 
