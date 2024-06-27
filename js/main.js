@@ -6,7 +6,7 @@
 import '../sass/render.scss';
 
 // API  ===========================================================//  
-import { getRecipes } from './components/api'; 
+import { getRecipes, getIngredients, getDevices, getUstensils } from './components/api'
 // COMPONENTS =====================================================//
 import {
     recipesContainer, mainSearchBar, recipesCounter, dropdownIngredients, dropdownIngredientsCollapsed,
