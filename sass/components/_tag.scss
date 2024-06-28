@@ -2,7 +2,7 @@
 // _TAG ==============================================================//
 //==================================== By Nepha =============== 2024 =//
  @use "../base/colors";
-    @use "../base/typo";   
+ @use "../base/typo";   
 
 #tag-container {
     display: flex;
@@ -38,7 +38,7 @@
 
         img {
             cursor: pointer;
-            width: 23px;
+            width: 19px;
         }
     }
 }
