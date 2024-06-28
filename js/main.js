@@ -2,23 +2,36 @@
 // ===== PROGZ MAIN APP ===========================================//
 // =========================================== NEAH 2024 ==========//
 
-// SASS ===========================================================//  
-import '../sass/render.scss';
+// SASS ===========================================================//
+import "../sass/render.scss";
 
-// API  ===========================================================//  
-import { getRecipes, getIngredients, getDevices, getUstensils } from './components/api'
+// API  ===========================================================//
+import {
+  getRecipes,
+  getIngredients,
+  getDevices,
+  getUstensils,
+} from "./components/api";
 // COMPONENTS =====================================================//
 import {
-    recipesContainer, mainSearchBar, recipesCounter, dropdownIngredients, dropdownIngredientsCollapsed,
-    ingredientsSearchBar, dropdownDevices, dropdownDevicesCollapsed, devicesSearchBar,
-    dropdownUstensils, dropdownUstensilsCollapsed, ustensilsSearchBar
-} from './components/domLinker';
+  recipesContainer,
+  mainSearchBar,
+  recipesCounter,
+  dropdownIngredients,
+  dropdownIngredientsCollapsed,
+  ingredientsSearchBar,
+  dropdownDevices,
+  dropdownDevicesCollapsed,
+  devicesSearchBar,
+  dropdownUstensils,
+  dropdownUstensilsCollapsed,
+  ustensilsSearchBar,
+} from "./components/domLinker";
 
 // MODELS =========================================================//
-import { createCard } from './models/card';
+import { createCard } from "./models/card";
 
-import { createItem } from './models/dropdown';
-
+import { createItem } from "./models/dropdown";
 
 // APP ============================================================//
 
@@ -38,83 +51,93 @@ const displayRecipes = data => {
 
 displayRecipes(getRecipes());
 */
-const applyCategorySearch = category => {
-    let data
+const applyCategorySearch = (category) => {
+  let data;
 
-    if (category === 'ingredients') {
-        data = getIngredients(mainSearchBar.value, ingredientsSearchBar.value)
-    }
+  if (category === "ingredients") {
+    data = getIngredients(mainSearchBar.value, ingredientsSearchBar.value);
+  }
 
-    if (category === 'devices') {
-        data = getDevices(mainSearchBar.value, devicesSearchBar.value)
-    }
+  if (category === "devices") {
+    data = getDevices(mainSearchBar.value, devicesSearchBar.value);
+  }
 
-    if (category === 'ustensils') {
-        data = getUstensils(mainSearchBar.value, ustensilsSearchBar.value)
-    }
+  if (category === "ustensils") {
+    data = getUstensils(mainSearchBar.value, ustensilsSearchBar.value);
+  }
 
-    const categoryToDisplay = document.querySelector(`#dropdown-${category} .items-container`)
+  const categoryToDisplay = document.querySelector(
+    `#dropdown-${category} .items-container`
+  );
 
-    createItem(data, categoryToDisplay, category)
-}
-
+  createItem(data, categoryToDisplay, category);
+};
 
 const updateRecipes = () => {
-    const data = getRecipes(mainSearchBar.value)
-    displayRecipes(data)
-    updateRecipesCounter(data)
-    applyCategorySearch('ingredients')
-    applyCategorySearch('devices')
-    applyCategorySearch('ustensils')
-}
+  const data = getRecipes(mainSearchBar.value);
+  displayRecipes(data);
+  updateRecipesCounter(data);
+  applyCategorySearch("ingredients");
+  applyCategorySearch("devices");
+  applyCategorySearch("ustensils");
+};
 
-const updateRecipesCounter = data => {
-    recipesCounter.innerHTML = `${data.length} recettes`
-}
+const updateRecipesCounter = (data) => {
+  recipesCounter.innerHTML = `${data.length} recettes`;
+};
 
 /**
  * Update DOM receipes in function of data in param
- * @param {*} data 
+ * @param {*} data
  */
-const displayRecipes = data => {
-    recipesContainer.innerHTML = ''
+const displayRecipes = (data) => {
+  recipesContainer.innerHTML = "";
 
-    data.forEach(item => {
-        const card = createCard(item)
-        recipesContainer.appendChild(card)
-    })
-}
+  data.forEach((item) => {
+    const card = createCard(item);
+    recipesContainer.appendChild(card);
+  });
+};
 
-updateRecipes()
+updateRecipes();
 
-mainSearchBar.addEventListener('input', updateRecipes)
+mainSearchBar.addEventListener("input", updateRecipes);
 
-dropdownIngredients.addEventListener('click', () => {
-    dropdownIngredients.classList.toggle('down')
-    dropdownIngredientsCollapsed.style.display = dropdownIngredients.classList.contains('down') ? 'flex' : 'none'
-    applyCategorySearch('ingredients')
-})
+dropdownIngredients.addEventListener("click", () => {
+  dropdownIngredients.classList.toggle("down");
+  dropdownIngredientsCollapsed.style.display =
+    dropdownIngredients.classList.contains("down") ? "flex" : "none";
+  applyCategorySearch("ingredients");
+});
 
-ingredientsSearchBar.addEventListener('input', () => applyCategorySearch('ingredients'))
+ingredientsSearchBar.addEventListener("input", () =>
+  applyCategorySearch("ingredients")
+);
 
-dropdownDevices.addEventListener('click', () => {
-    dropdownDevices.classList.toggle('down')
-    dropdownDevicesCollapsed.style.display = dropdownDevices.classList.contains('down') ? 'flex' : 'none'
-    applyCategorySearch('devices')
-})
+dropdownDevices.addEventListener("click", () => {
+  dropdownDevices.classList.toggle("down");
+  dropdownDevicesCollapsed.style.display = dropdownDevices.classList.contains(
+    "down"
+  )
+    ? "flex"
+    : "none";
+  applyCategorySearch("devices");
+});
 
-devicesSearchBar.addEventListener('input', () => applyCategorySearch('devices'))
+devicesSearchBar.addEventListener("input", () =>
+  applyCategorySearch("devices")
+);
 
-dropdownUstensils.addEventListener('click', () => {
-    dropdownUstensils.classList.toggle('down')
-    dropdownUstensilsCollapsed.style.display = dropdownUstensils.classList.contains('down') ? 'flex' : 'none'
-    applyCategorySearch('ustensils')
-})
+dropdownUstensils.addEventListener("click", () => {
+  dropdownUstensils.classList.toggle("down");
+  dropdownUstensilsCollapsed.style.display =
+    dropdownUstensils.classList.contains("down") ? "flex" : "none";
+  applyCategorySearch("ustensils");
+});
 
-ustensilsSearchBar.addEventListener('input', () => applyCategorySearch('ustensils'))
-
-
-
+ustensilsSearchBar.addEventListener("input", () =>
+  applyCategorySearch("ustensils")
+);
 
 //=================================================================
 /*

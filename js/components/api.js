@@ -6,6 +6,9 @@ import { filterMainSearchBar, isLowerCaseIncluded } from './search'
 
 export const getRecipes = (value = '') => value.length >= 3 ? filterMainSearchBar(recipes, value) : recipes
 
+
+
+// getIngredients ================================================//
 export const getIngredients = (main = '', value = '') => {
     const recipes = getRecipes(main)
     let ingredients = []
@@ -16,14 +19,14 @@ export const getIngredients = (main = '', value = '') => {
     })
     return value.length >= 3 ? ingredients.filter(item => isLowerCaseIncluded(item, value)) : ingredients
 }
-
+// getDevices ====================================================//
 export const getDevices = (main = '', value = '') => {
     const recipes = getRecipes(main)
 
     const devices = [...new Set(recipes.map(item => item.appliance))]
     return value.length >= 3 ? devices.filter(item => isLowerCaseIncluded(item, value)) : devices
 }
-
+// getUstensils ==================================================//
 export const getUstensils = (main = '', value = '') => {
     const recipes = getRecipes(main)
     let ustensils = []

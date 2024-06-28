@@ -11,7 +11,8 @@ export const dropdownIngredients = document.querySelector('#dropdown-ingredients
 export const dropdownIngredientsCollapsed = document.querySelector('#dropdown-ingredients .collapsed');
 export const ingredientsSearchBar = document.getElementById('ingredients-search-bar');
 export const deleteIngredientsSearchBar = document.querySelector('#dropdown-ingredients .delete');
-//
+
+// DROPDOWNS ======================================================
 export const dropdownDevices = document.querySelector('#dropdown-devices img');
 export const dropdownDevicesCollapsed = document.querySelector('#dropdown-devices .collapsed');
 export const devicesSearchBar = document.getElementById('devices-search-bar');

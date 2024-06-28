@@ -44,6 +44,7 @@
       <!--DROPDOWN START -->
       
       <section id="dropdown-container">
+        <div id="filter-container">
         <!-- INGREDIENT -->
         <div id="dropdown-ingredients" class="dropdown">
           <span>Ingrédients</span>
@@ -52,7 +53,7 @@
             <input id="ingredients-search-bar" class="search-bar">
             <img class="delete" src="/images/common/cross.svg" alt="delete" />
             <div class="loop-container">
-              <img src="/images/common/loop.svg" alt="loop" />
+              <img src="/images/common/loop-drop.svg" alt="loop" />
             </div>
             <section class="items-container">
             </section>
@@ -67,7 +68,7 @@
             <input id="devices-search-bar" class="search-bar">
             <img class="delete" src="/images/common/cross.svg" alt="delete" />
             <div class="loop-container">
-              <img src="/images/common/loop.svg" alt="loop" />
+              <img src="/images/common/loop-drop.svg" alt="loop" />
             </div>
             <section class="items-container">
             </section>
@@ -82,16 +83,23 @@
             <input id="ustensils-search-bar" class="search-bar">
             <img class="delete" src="/images/common/cross.svg" alt="delete" />
             <div class="loop-container">
-              <img src="/images/common/loop.svg" alt="loop" />
+              <img src="/images/common/loop-drop.svg" alt="loop" />
             </div>
             <section class="items-container">
             </section>
           </div>
         </div>
+      </div>
         <!-- USTENSILS END -->
+        <div id="countRepice"><span>50 Recettes</span></div>
       </section>
       <!--DROPDOWN END -->
-      <!--
+      <!--TAG START -->
+      <section id="tag-container"></section>
+    <section id="recipes">
+      <div id="recipes-container"></div>
+    </section>
+    <!--
       <section id="tagsearch">
         <div class="tag">
           <button>
@@ -99,8 +107,9 @@
             <div aria-controls="button" role="combobox" class="tag__close"><img src="/images/common/cross.svg" alt="cross" /></div>
           </button>
         </div>
-      </section>
-    -->
+      </section> -->
+      <!--TAG END -->
+    <!--
     <section id="filter" aria-label="Filtrez les recettes" role="filter">
       <div id="filter-container">
         <div id="filter-ingredient" class="filterbox">
@@ -125,6 +134,7 @@
       <div id="countRepice"><span>50 Recettes</span></div>
     </section>
     <section id="recipes"><div id="recipes-container"></div>
+    -->
     </main>
     <footer>
       <p>© 2024 Petits Plats — OC 07 - JS Search Engine</p>

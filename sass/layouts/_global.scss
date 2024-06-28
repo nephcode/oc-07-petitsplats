@@ -2,7 +2,7 @@
 // _GLOBAL ===========================================================//
 //==================================== By Nepha ================2024==//
 @use "../base/colors";
-// @use "../base/typo";
+@use "../base/typo";
 
 *,
 *::before,
@@ -29,4 +29,15 @@ body {
 
  main    {
  margin-bottom: 50px;
+}
+
+#countRepice {
+  font-family: typo.$fontDefault;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: typo.$fontSizeTitle;
+  font-weight: bold;
+  color: colors.$colorBlack;
 }
