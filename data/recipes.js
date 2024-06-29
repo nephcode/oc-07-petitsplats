@@ -2,7 +2,7 @@ export const recipes = [
     {
         "id": 1,
         "image": "Recette01.webp",
-        "name": "Limonade de Coco",
+        "name": "Limonade de coco",
         "servings": 1,
         "ingredients": [
             {
@@ -61,7 +61,7 @@ export const recipes = [
                 "quantity": 5
             },
             {
-                "ingredient": "Lait de Coco",
+                "ingredient": "Lait de coco",
                 "quantity": 100,
                 "unit": "ml"
             }

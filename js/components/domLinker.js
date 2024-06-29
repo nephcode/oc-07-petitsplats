@@ -5,7 +5,7 @@
 // MAIN ============================================= NEPH & NEAH =//
 export const recipesContainer = document.getElementById('recipes-container');
 export const mainSearchBar = document.getElementById('searchbar');
-export const cleanInputMain = document.getElementById('#clean-input-main')
+export const cleanInputMain = document.getElementById('clean-input-main')
 
 // COUNTER ========================================================//
 export const recipesCounter = document.querySelector('#countRepice span');

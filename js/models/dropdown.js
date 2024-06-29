@@ -53,9 +53,18 @@ export const createTag = (data, category) => {
 
 // CLEAN INPUT ====================================================//
 export const inputCleaner = (element, trigger, target ) =>{
+    element.style.display = 'none';
+    target.addEventListener('input', () => { // Utilisation de 'input' pour détecter chaque saisie
+        if (target.value.length >= 3) {
+            element.style.display = 'flex'; // Afficher l'élément si la longueur est >= 3
+        } else {
+            element.style.display = 'none'; // Sinon, masquer l'élément
+        }
+    });
     element.addEventListener(trigger, () => {
         target.tagName.toLowerCase() === 'input';
         target.value = '';
+        element.style.display = 'none';
         console.log("Clean : " + target.id);
     });
 }
