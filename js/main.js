@@ -26,12 +26,15 @@ import {
   dropdownUstensils,
   dropdownUstensilsCollapsed,
   ustensilsSearchBar,
+  deleteIngredientsSearchBar,
+  deleteDevicesSearchBar,
+  deleteUstensilsSearchBar,
+  cleanInputMain
 } from "./components/domLinker";
 
 // MODELS =========================================================//
 import { createCard } from "./models/card";
-
-import { createItem } from "./models/dropdown";
+import { createItem, inputCleaner } from "./models/dropdown";
 
 // APP ============================================================//
 
@@ -138,8 +141,13 @@ dropdownUstensils.addEventListener("click", () => {
 ustensilsSearchBar.addEventListener("input", () =>
   applyCategorySearch("ustensils")
 );
+// INPUT CLEANER ================================= NEPH =============//
+//inputCleaner(cleanInputMain, "click", mainSearchBar);
+inputCleaner(deleteIngredientsSearchBar, "click", ingredientsSearchBar);
+inputCleaner(deleteDevicesSearchBar, "click", devicesSearchBar);
+inputCleaner(deleteUstensilsSearchBar, "click", ustensilsSearchBar);
+//===================================================================//
 
-//=================================================================
 /*
 class App {
     constructor() {

@@ -1,6 +1,13 @@
+// NEPHELIM CODE ==================================================//
+// ===== DROPDOWN =================================================//
+// =========================================== NEAH 2024 ==========//
+
+// IMPORTS  =======================================================//
+
 import { tagContainer } from "../components/domLinker";
 import { state } from "../components/state";
 
+// CREATE ITEM ===================================================//
 export const createItem = (data, parent, category) => {
 
     parent.innerHTML = ''
@@ -17,7 +24,8 @@ export const createItem = (data, parent, category) => {
     });
 }
 
-const createTag = (data, category) => {
+// CREATE TAG ====================================================//
+export const createTag = (data, category) => {
 
     console.log(state.tags)
 
@@ -43,8 +51,23 @@ const createTag = (data, category) => {
 
 }
 
-const deleteTag = (tagElement, data, category) => {
+// CLEAN INPUT ====================================================//
+export const inputCleaner = (element, trigger, target ) =>{
+    element.addEventListener(trigger, () => {
+        target.tagName.toLowerCase() === 'input';
+        target.value = '';
+        console.log("Clean : " + target.id);
+    });
+}
+
+
+
+
+// DELETE TAG ====================================================//
+export const deleteTag = (tagElement, data, category) => {
     tagElement.parentNode.removeChild(tagElement)
     state.tags[category] = state.tags[category].filter(item => item !== data)
     console.log(state.tags)
 }
+
+// 2024 ==========================================================//    

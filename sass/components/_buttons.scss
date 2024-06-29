@@ -13,7 +13,7 @@ button {
   border: none;
 }
 
-// SEARCH ==========================================================//
+// SEARCH ======================================== 🫶 ================//
 
 .search-button{
 width: 100%;
@@ -27,6 +27,24 @@ align-content: center;
     margin : auto
   }
 
+}
+
+#clean-input-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content; 
+  padding: 7px;
+  position: relative;
+  top: 18px;
+  right: 175px;
+  height: fit-content;
+  border-radius: 8px;
+  border: 1px solid colors.$colorGrey;
+  font-weight: bold;
+  font-family: typo.$fontDefault;
+  color: colors.$colorGrey ;
+  cursor: pointer;
 }
 
 

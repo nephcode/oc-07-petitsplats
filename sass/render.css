@@ -201,6 +201,24 @@ button {
   margin: auto;
 }
 
+#clean-input-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 7px;
+  position: relative;
+  top: 18px;
+  right: 175px;
+  height: fit-content;
+  border-radius: 8px;
+  border: 1px solid #7A7A7A;
+  font-weight: bold;
+  font-family: "Manrope", sans-serif;
+  color: #7A7A7A;
+  cursor: pointer;
+}
+
 .tag {
   min-width: 120px;
   max-width: 200px;
@@ -319,7 +337,7 @@ button {
   width: 87%;
   height: 34px;
   border-radius: 2px;
-  border: 1px solid #EDEDED;
+  border: 1px solid #7A7A7A;
   padding-top: 0;
   padding-bottom: 0;
   color: #7A7A7A;
@@ -431,7 +449,7 @@ main {
 }
 
 #countRepice {
-  font-family: "Manrope", sans-serif;
+  font-family: "Anton", sans-serif;
   text-transform: capitalize;
   display: flex;
   justify-content: center;
@@ -496,13 +514,13 @@ header .header-title .main-search-bar-container .search-bar {
   line-height: normal;
 }
 header .header-title .main-search-bar-container .loop-container {
-  width: 51px;
+  width: 52px;
   height: 52px;
   border-radius: 10px;
   background: #000000;
-  position: absolute;
+  position: relative;
   top: 10px;
-  right: 11.3%;
+  right: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
