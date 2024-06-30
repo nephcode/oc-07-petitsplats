@@ -202,14 +202,9 @@ button {
 }
 
 #clean-input-main {
-  display: flex;
-  justify-content: center;
   align-items: center;
   width: fit-content;
   padding: 7px;
-  position: relative;
-  top: 18px;
-  right: 175px;
   height: fit-content;
   border-radius: 8px;
   border: 1px solid #7A7A7A;
@@ -217,6 +212,7 @@ button {
   font-family: "Manrope", sans-serif;
   color: #7A7A7A;
   cursor: pointer;
+  z-index: 2;
 }
 
 .tag {
@@ -460,16 +456,16 @@ main {
 }
 
 header {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   height: 667px;
   background-image: url("/images/common/header_background.jpg");
   background-size: cover;
   background-position: center center;
 }
 header #logo {
-  position: absolute;
-  top: 35px;
-  left: 69px;
+  display: flex;
+  margin: 30px;
 }
 header #logo a img {
   height: 26px;
@@ -479,7 +475,7 @@ header .header-title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 50%;
 }
 header .header-title h1 {
   font-family: "Anton";
@@ -491,20 +487,31 @@ header .header-title h1 {
   color: #FFD15B;
   width: 50%;
 }
-header .header-title .main-search-bar-container {
-  position: relative;
-  width: 80%;
+
+#searchcontainer {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  width: 100%;
+  padding: 8px;
 }
-header .header-title .main-search-bar-container .search-bar {
-  width: 80%;
+#searchcontainer .search-bar {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px auto 20px;
+  background-color: #FFFFFF;
+  border-radius: 11px;
+}
+#searchcontainer #searchbar {
+  flex: 1;
   height: 72px;
   border-radius: 11px;
   background-color: #FFFFFF;
-  border: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  border: none;
+  outline: none;
   padding-left: 35px;
   color: #7A7A7A;
   font-family: "Manrope";
@@ -513,34 +520,23 @@ header .header-title .main-search-bar-container .search-bar {
   font-weight: 400;
   line-height: normal;
 }
-header .header-title .main-search-bar-container .loop-container {
-  width: 52px;
-  height: 52px;
+#searchcontainer .loop-container {
+  width: fit-content;
+  height: fit-content;
   border-radius: 10px;
   background: #000000;
-  position: relative;
-  top: 10px;
-  right: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
+  margin: 0px 10px;
   cursor: pointer;
 }
-header .header-title .main-search-bar-container .loop-container:hover {
+#searchcontainer .loop-container:hover {
   background: #FFD15B;
 }
-header .header-title .main-search-bar-container .loop-container:hover svg g circle {
+#searchcontainer .loop-container:hover svg g circle {
   stroke: #000000;
 }
-header .header-title .main-search-bar-container .loop-container:hover svg g line {
+#searchcontainer .loop-container:hover svg g line {
   stroke: #000000;
-}
-header .header-title .main-search-bar-container .delete {
-  position: absolute;
-  top: 28px;
-  right: 18%;
-  display: none;
-  cursor: pointer;
 }
 
 #recipes, #tagsearch, #filter {

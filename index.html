@@ -2,22 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/common/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/images/common/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./js/main.js" defer></script>
     <title>Les petits plats</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Manrope:wght@200..800&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
-    />
+    >
   </head>
   <body>
     <header>
       <div id="logo">
         <a class="logo" href="/">
-          <img alt="logo" src="/images/common/logo.svg" />
+          <img alt="logo" src="/images/common/logo.svg">
         </a>
       </div>
       <div class="header-title">
@@ -25,18 +25,16 @@
           CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET
           DÉLICIEUSES
         </h1>
-        <div class="main-search-bar-container">
-          <input
-            id="searchbar"
-            class="search-bar"
-            placeholder="Rechercher une recette, un ingrédient, ..."
-          />
+      </div>
+      <div id="searchcontainer" class="main-search-bar-container">
+        <div class="search-bar">
+          <input id="searchbar" placeholder="Rechercher une recette, un ingrédient, ...">
+          <button id="clean-input-main">⌘+Del</button>
           <div id="loop" class="loop-container">
             <button id="search" class="search-button">
-              <img src="/images/common/loop.svg" alt="loop" />
+              <img src="/images/common/loop.svg" alt="loop">
             </button>
           </div>
-          <button id="clean-input-main">⌘+Del</button>
         </div>
       </div>
     </header>

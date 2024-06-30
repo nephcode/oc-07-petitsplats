@@ -30,14 +30,11 @@ align-content: center;
 }
 
 #clean-input-main{
-  display: flex;
-  justify-content: center;
+  //display: flex;
+  //justify-content: center;
   align-items: center;
   width: fit-content; 
   padding: 7px;
-  position: relative;
-  top: 18px;
-  right: 175px;
   height: fit-content;
   border-radius: 8px;
   border: 1px solid colors.$colorGrey;
@@ -45,6 +42,7 @@ align-content: center;
   font-family: typo.$fontDefault;
   color: colors.$colorGrey ;
   cursor: pointer;
+  z-index: 2;
 }
 
 
