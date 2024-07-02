@@ -33,3 +33,18 @@ export const filterMainSearchBar = (recipes, value) => recipes.filter(item =>
     isLowerCaseIncluded(item.description, value) ||
     isLowerCaseIncluded(item.name, value) ||
     isFound(item.ingredients, 'ingredient', value))
+
+    const isRecipeIncludesEveryTagIngredient = (recipe, tags) => tags.ingredients.every(ingredient => recipe.ingredients.map(elem => elem.ingredient).includes(ingredient))
+const isRecipeIncludesEveryTagDevice = (recipe, tags) => tags.devices.every(device => recipe.appliance.includes(device))
+const isRecipeIncludesEveryTagUstensil = (recipe, tags) => tags.ustensils.every(ustensil => recipe.ustensils.includes(ustensil))
+
+/**
+ * Get recipes which include every tag in param
+ * @param {Array} recipes - Array of object (recipes)
+ * @param {Object} tags - tags to search
+ * @returns Array of object of recipes
+ */
+export const filterByTags = (recipes, tags) => recipes.filter(recipe =>
+    isRecipeIncludesEveryTagIngredient(recipe, tags) &&
+    isRecipeIncludesEveryTagDevice(recipe, tags) &&
+    isRecipeIncludesEveryTagUstensil(recipe, tags))

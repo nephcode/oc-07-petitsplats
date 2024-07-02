@@ -8,24 +8,21 @@ import { tagContainer } from "../components/domLinker";
 import { state } from "../components/state";
 
 // CREATE ITEM ===================================================//
-export const createItem = (data, parent, category) => {
+export const createItem = (data, parent, category, callback) => {
 
     parent.innerHTML = ''
 
     data.forEach(item => {
         const article = document.createElement('article')
         article.innerHTML = item
-
-        // TODO create Tag
-        article.addEventListener('click', () => createTag(item, category))
-
-
+        // Create tag
+        article.addEventListener('click', () => createTag(item, category, callback))
         parent.appendChild(article)
     });
 }
 
 // CREATE TAG ====================================================//
-export const createTag = (data, category) => {
+export const createTag = (data, category, callback) => {
 
     console.log(state.tags)
 
@@ -41,14 +38,13 @@ export const createTag = (data, category) => {
         img.src = '/images/common/cross.svg'
         img.alt = 'supprimer le tag'
 
-        img.addEventListener('click', () => deleteTag(article, data, category))
+        img.addEventListener('click', () => deleteTag(article, data, category, callback))
 
         article.appendChild(img)
 
         tagContainer.appendChild(article)
+        callback();
     }
-
-
 }
 
 // CLEAN INPUT ====================================================//
@@ -69,14 +65,11 @@ export const inputCleaner = (element, trigger, target ) =>{
     });
 }
 
-
-
-
 // DELETE TAG ====================================================//
-export const deleteTag = (tagElement, data, category) => {
+export const deleteTag = (tagElement, data, category, callback) => {
     tagElement.parentNode.removeChild(tagElement)
     state.tags[category] = state.tags[category].filter(item => item !== data)
-    console.log(state.tags)
+    // update all display
+    callback()
 }
-
 // 2024 ==========================================================//    

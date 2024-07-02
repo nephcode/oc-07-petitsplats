@@ -1,10 +1,14 @@
 // NEPHELIM CODE ============================= LULZCODE ===========//
 // ===== API === ^_^ ==============================================//
 // =========================================== NEAH 2024 ==========//
-import { recipes } from '../../data/recipes'
-import { filterMainSearchBar, isLowerCaseIncluded } from './search'
+import { recipes } from '../../data/recipes';
+import { filterMainSearchBar, isLowerCaseIncluded, filterByTags } from './search';
+import { state } from './state';
 
-export const getRecipes = (value = '') => value.length >= 3 ? filterMainSearchBar(recipes, value) : recipes
+export const getRecipes = (value = '') => {
+    const result = value.length >= 3 ? filterMainSearchBar(recipes, value) : recipes
+    return filterByTags(result, state.tags)
+}
 
 
 
