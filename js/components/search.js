@@ -34,7 +34,7 @@ export const filterMainSearchBar = (recipes, value) => recipes.filter(item =>
     isLowerCaseIncluded(item.name, value) ||
     isFound(item.ingredients, 'ingredient', value))
 
-    const isRecipeIncludesEveryTagIngredient = (recipe, tags) => tags.ingredients.every(ingredient => recipe.ingredients.map(elem => elem.ingredient).includes(ingredient))
+const isRecipeIncludesEveryTagIngredient = (recipe, tags) => tags.ingredients.every(ingredient => recipe.ingredients.map(elem => elem.ingredient).includes(ingredient))
 const isRecipeIncludesEveryTagDevice = (recipe, tags) => tags.devices.every(device => recipe.appliance.includes(device))
 const isRecipeIncludesEveryTagUstensil = (recipe, tags) => tags.ustensils.every(ustensil => recipe.ustensils.includes(ustensil))
 

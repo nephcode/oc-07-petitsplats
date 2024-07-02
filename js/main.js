@@ -33,6 +33,9 @@ import {
   
 } from "./components/domLinker";
 
+// SEARCH =========================================================//
+import { filterByTags,  } from "./components/search";
+
 // MODELS =========================================================//
 import { createCard } from "./models/card";
 import { createItem, inputCleaner } from "./models/dropdown";

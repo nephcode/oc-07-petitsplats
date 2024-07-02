@@ -10,8 +10,6 @@ export const getRecipes = (value = '') => {
     return filterByTags(result, state.tags)
 }
 
-
-
 // getIngredients ================================================//
 export const getIngredients = (main = '', value = '') => {
     const recipes = getRecipes(main)
