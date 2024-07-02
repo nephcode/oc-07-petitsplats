@@ -4,16 +4,17 @@
 @use "../base/colors";
 
 header {
-    position: relative;
-    height: 667px;
+    display: flex;
+    flex-direction: column;
+    
+    height: 667px; // ÉQIP
     background-image: url('/images/common/header_background.jpg');
     background-size: cover;
     background-position: center center;
 
     #logo  {
-        position: absolute;
-        top: 35px;
-        left: 69px;
+        display: flex;
+        margin: 30px;
 
         a {
             img {
@@ -27,7 +28,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        height: 50%;
 
         h1 {
             font-family: 'Anton';
@@ -40,72 +41,65 @@ header {
             width: 50%;
         }
 
-        .main-search-bar-container {
-            position: relative;
-            width: 80%;
-            display: flex;
-            justify-content: center;
+    }
+}
 
-            .search-bar {
-                width: 80%;
-                height: 72px;
-                border-radius: 11px;
-                background-color: colors.$colorComboIconsymbol;
-                border: 0;
-                padding-top: 0;
-                padding-bottom: 0;
-                padding-left: 35px;
+#searchcontainer {
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
 
-                color: colors.$colorGrey;
-                font-family: 'Manrope';
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
+    .search-bar{
+        width: 70%;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 20px auto 20px;
+        background-color: colors.$colorComboBack;
+        border-radius: 11px ;
+      }
 
-            .loop-container {
-                width: 51px;
-                height: 52px;
-                border-radius: 10px;
-                background: colors.$colorBlack;
-                position: absolute;
-                top: 10px;
-                right: 11.3%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
+    #searchbar {
+        flex: 1;
+        height: 72px;
+        border-radius: 11px;
+        background-color: colors.$colorComboBack;
+        border: none;
+        outline: none;
+        padding-left: 35px;
 
-                &:hover {
-                    background: colors.$colorMain;
-
-                    svg {
-                        g {
-                            circle {
-                                stroke: colors.$colorBlack;
-                            }
-
-                            line {
-                                stroke: colors.$colorBlack;
-                            }
-                        }
-
-                    }
-                }
-
-
-            }
-
-            .delete {
-                position: absolute;
-                top: 28px;
-                right: 18%;
-                display: none;
-                cursor: pointer;
-            }
-        }
-
+        color: colors.$colorGrey;
+        font-family: 'Manrope';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 
+    .loop-container {
+        width: fit-content;
+        height: fit-content;
+        border-radius: 10px;
+        background: colors.$colorBlack;
+        padding: 10px;
+        margin: 0px 10px;
+        cursor: pointer;
+
+        &:hover {
+            background: colors.$colorMain;
+            svg {
+                g {
+                    circle {
+                        stroke: colors.$colorBlack;
+                    }
+                    line {
+                        stroke: colors.$colorBlack;
+                    }
+                }
+            }
+        }
+    }
 }

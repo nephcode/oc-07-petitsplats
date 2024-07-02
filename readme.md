@@ -47,6 +47,12 @@ A JavaScript project for OpenClassrooms **REACT** course AKA Project 7 PETITS PL
 
 👩🏼‍💻 Once upon a time, a dev girl took a new project ...7 Petits plats because i love sugar, daddy
 
+## Upgrade `[Optionnel]`
+- Animation-range()
+- View-transition()
+- text-wrap:pretty()
+- light-dark() __May 2024__
+
 ![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/nephcode-public/githubReadmeSkills.png)
 Since Pyramids from future road to final temple
 

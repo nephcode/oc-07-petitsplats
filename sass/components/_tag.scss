@@ -1,0 +1,44 @@
+//============================================= OC-07 ================//
+// _TAG ==============================================================//
+//==================================== By Nepha =============== 2024 =//
+ @use "../base/colors";
+ @use "../base/typo";   
+
+#tag-container {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin: 20px auto 20px;
+
+    article {
+        margin-top: 21px;
+        margin-right: 10px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        padding-left: 18px;
+        padding-right: 18px;
+        border-radius: 10px;
+        background: colors.$colorMain;
+
+        color: colors.$colorBlack;
+        font-family: typo.$fontDefault;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            margin-right: 60px;
+        }
+
+        img {
+            cursor: pointer;
+            width: 19px;
+        }
+    }
+}

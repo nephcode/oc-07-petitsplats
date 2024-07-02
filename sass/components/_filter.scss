@@ -1,0 +1,141 @@
+//============================================= OC-07 ================//
+// _FILTER ===========================================================//
+//==================================== By Nepha =============== 2024 =//
+@use "../base/colors";
+@use "../base/typo";
+
+#dropdown-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 20px auto 20px; 
+    justify-content: space-between;
+
+    #filter-container{
+        display: flex;
+    }
+
+    .dropdown {
+        gap:20px;
+        display: flex;
+        padding: 17px 16px;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 11px;
+        color: colors.$colorBlack;
+        background: colors.$colorWhite;
+        margin-right: 66px;
+        position: relative;
+
+        span {
+            color: colors.$colorBlack;
+            font-family: "Manrope";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            padding-right: 63px;
+        }
+
+        img {
+            height:26px;
+            width: 26px;
+            cursor: pointer;
+
+            &.down {
+                transform: rotate(180deg);
+            }
+        }
+
+        .collapsed {
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 48px;
+            left: 0px;
+            background: colors.$colorWhite;
+            z-index: 1;
+            border-bottom-left-radius: 11px;
+            border-bottom-right-radius: 11px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            
+
+            .search-bar {
+                width: 87%;
+                height: 34px;
+                border-radius: 2px;
+                border: 1px solid colors.$colorComboBox;
+                padding-top: 0;
+                padding-bottom: 0;
+                color: colors.$colorGrey;
+                font-family: typo.$fontDefault;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .delete {
+                position: absolute;
+                top: 10px;
+                right: 45px;
+                display: block;
+                cursor: pointer;
+                //width: 10px;
+                height:15px;
+                width: 15px;
+            }
+
+            .loop-container {
+                display: flex;
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                top: 9px;
+                right: 20px;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                img {
+                    height:18px;
+                    width: 18px;
+                    //width: 20px;
+                }
+            }
+
+            .items-container {
+                margin-top: 14px;
+                width: 100%;
+                height: 200px;
+                overflow: auto;
+                scrollbar-width: none;
+
+                article {
+                    color: colors.$colorBlack;
+                    font-family: typo.$fontDefault;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: colors.$colorMain;
+                        margin-bottom: 1px;
+                    }
+                }
+            }
+
+        }
+    }
+}
