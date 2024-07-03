@@ -42,13 +42,14 @@ import { createItem, inputCleaner } from "./models/dropdown";
 import { state } from "./components/state";
 // APP ============================================================//
 
-console.log(getRecipes())
-
+console.log(getRecipes());
+//console.log(data);
+/*
 const displayDeleteCategoryButton = (value, category) => {
     const deleteCategoryButton = document.querySelector(`#dropdown-${category} .delete`)
     deleteCategoryButton.style.display = value.length > 0 ? 'flex' : 'none'
 }
-
+*/
 const applyCategorySearch = category => {
     let data
 
@@ -79,9 +80,20 @@ const applyCategorySearch = category => {
 
 const updateRecipes = () => {
     const data = getRecipes(mainSearchBar.value)
-    displayRecipes(data)
+    //display ZERO recipes
+
+    //console.log(data.length);
+    //console.log(data);
+    //console.log(data.value);
+    if (data.length === 0) {
+        recipesContainer.innerHTML = `<div class="zero">Il n'y a pas de recettes avec la recherche en cours<br> ${data.length} recettes</div>`
+    }
+    else{
+        displayRecipes(data)
+    }   
     //displayDeleteButton(mainSearchBar.value)
     updateRecipesCounter(data)
+    
     applyCategorySearch('ingredients')
     applyCategorySearch('devices')
     applyCategorySearch('ustensils')
@@ -91,7 +103,12 @@ const updateRecipes = () => {
 const updateRecipesCounter = data => {
     recipesCounter.innerHTML = `${data.length} recettes`
 }
+/*
+const updateRecipesZero = data => {
 
+    recipesContainer.innerHTML = `Il n'y a pas de recettes avec la recherche en cours ${data.length} recettes`
+}
+*/
 /**
  * Display or not delete button of main search bar in function of main search bar value in param
  * @param {String} value main searchbar value

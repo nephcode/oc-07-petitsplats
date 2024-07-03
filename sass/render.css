@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter&family=Manrope:wght@200..800&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 #recipes-container article {
@@ -453,6 +454,19 @@ main {
   font-size: 1.2rem;
   font-weight: bold;
   color: #000000;
+}
+
+.zero {
+  /* Petit hack d'affichage pour les recettes sans ingrédients */
+  grid-column: 1/-1; /* Cette règle étend la div sur toutes les colonnes de la grille */
+  width: 100%;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
 }
 
 header {

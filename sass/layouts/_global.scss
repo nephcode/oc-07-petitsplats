@@ -30,3 +30,16 @@ body {
   font-weight: bold;
   color: colors.$colorBlack;
 }
+
+.zero{
+  /* Petit hack d'affichage pour les recettes sans ingrédients */
+  grid-column: 1 / -1;  /* Cette règle étend la div sur toutes les colonnes de la grille */
+  width: 100%;
+  text-align: center;
+  font-family: typo.$fontSecondary;
+  color: colors.$colorBlack;
+  font-size: typo.$fontSizeTitle;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+}
