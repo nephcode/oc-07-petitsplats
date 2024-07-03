@@ -10,17 +10,34 @@ export const getRecipes = (value = '') => {
     return filterByTags(result, state.tags)
 }
 
-// getIngredients ================================================//
+// getIngredients ========================`FOR` ALGO=========================//
 export const getIngredients = (main = '', value = '') => {
-    const recipes = getRecipes(main)
-    let ingredients = []
+    const startTime = performance.now(); // perf
+    const recipes = getRecipes(main);
+    let ingredients = [];
 
     // Get all unique ingredients
-    recipes.forEach(recipe => {
-        ingredients = [...new Set([...ingredients, ...recipe.ingredients.map(item => item.ingredient)])]
-    })
-    return value.length >= 3 ? ingredients.filter(item => isLowerCaseIncluded(item, value)) : ingredients
-}
+    for (let i = 0; i < recipes.length; i++) {
+        const recipeIngredients = recipes[i].ingredients;
+        for (let j = 0; j < recipeIngredients.length; j++) {
+            const ingredient = recipeIngredients[j].ingredient;
+            // Utilise un ensemble (Set) pour éviter les doublons
+            if (!ingredients.includes(ingredient)) {
+                ingredients.push(ingredient);
+            }
+        }
+    }
+
+    // Filtrer les ingrédients si la valeur a au moins 3 caractères
+    if (value.length >= 3) {
+        ingredients = ingredients.filter(item => isLowerCaseIncluded(item, value));
+    }
+    // perf console
+    const endTime = performance.now();
+    console.log("getIngredients Execution Time:", (endTime - startTime).toFixed(4), "ms");
+    // >> return
+    return ingredients;
+};
 // getDevices ====================================================//
 export const getDevices = (main = '', value = '') => {
     const recipes = getRecipes(main)
