@@ -34,7 +34,7 @@ export const getIngredients = (main = '', value = '') => {
     }
     // perf console
     const endTime = performance.now();
-    console.log("getIngredients Execution Time:", (endTime - startTime).toFixed(4), "ms");
+    console.log("getIngredients Execution Time:", (endTime - startTime).toFixed(10), "ms");
     // >> return
     return ingredients;
 };
