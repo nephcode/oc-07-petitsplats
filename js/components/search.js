@@ -10,7 +10,18 @@
  * @param {String} value2
  * @returns Boolean
  */
-export const isLowerCaseIncluded = (value1, value2) => value1.toLowerCase().includes(value2.toLowerCase())
+//export const isLowerCaseIncluded = (value1, value2) => value1.toLowerCase().includes(value2.toLowerCase())
+// FOR 
+const  sortFor = (value1, value2) => value1.toLowerCase().includes(value2.toLowerCase());
+export const isLowerCaseIncluded = (array, property, value) => {
+    for (let i = 0; i < array.length; i++) {
+        if (sortFor(array[i][property], value)) {
+            return array[i];  // Retourne l'élément dès que la condition est vraie
+        }
+    }
+    return undefined;  // Retourne undefined si aucun élément ne correspond
+}
+
 
 /**
  * returns the first element in the provided array that satisfies the provided testing function (isIncluded function).
@@ -20,8 +31,19 @@ export const isLowerCaseIncluded = (value1, value2) => value1.toLowerCase().incl
  * @param {String} value - String to search
  * @returns Object || undefined
  */
-const isFound = (array, property, value) => array.find(item => isLowerCaseIncluded(item[property], value))
 
+//for
+export const isFound = (array, property, value) => {
+    //array.find(item => isLowerCaseIncluded(item[property], value))
+
+    for (let i = 0; i < array.length; i++) {
+        if (sortFor(array[i][property], value)) {
+            item => isLowerCaseIncluded(item[property], value)
+            return array[i];  // Retourne l'élément dès que la condition est vraie
+        }
+    }
+    return undefined;  // Retourne undefined si aucun élément ne correspond
+}
 /**
  * Get recipes in function of value includes in at least one of followings properties:
  * name or description or ingredients
