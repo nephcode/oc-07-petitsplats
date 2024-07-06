@@ -13,6 +13,7 @@
 //export const isLowerCaseIncluded = (value1, value2) => value1.toLowerCase().includes(value2.toLowerCase())
 // FOR 
 const  sortFor = (value1, value2) => value1.toLowerCase().includes(value2.toLowerCase());
+// 
 export const isLowerCaseIncluded = (array, property, value) => {
     for (let i = 0; i < array.length; i++) {
         if (sortFor(array[i][property], value)) {
@@ -42,6 +43,7 @@ export const isFound = (array, property, value) => {
             return array[i];  // Retourne l'élément dès que la condition est vraie
         }
     }
+    //
     return undefined;  // Retourne undefined si aucun élément ne correspond
 }
 /**
