@@ -6,7 +6,7 @@
 
 import { tagContainer } from "../components/domLinker";
 import { state } from "../components/state";
-
+//import { updateRecipes } from "../main/";
 // CREATE ITEM ===================================================//
 export const createItem = (data, parent, category, callback) => {
 
@@ -62,7 +62,9 @@ export const inputCleaner = (element, trigger, target ) =>{
         target.value = '';
         element.style.display = 'none';
         console.log("Clean : " + target.id);
+        //updateRecipes();
     });
+    
 }
 
 // DELETE TAG ====================================================//
