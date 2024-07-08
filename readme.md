@@ -50,7 +50,8 @@ A JavaScript project for OpenClassrooms **REACT** course AKA Project 7 PETITS PL
 - Speed algo test 🐢  [Performance test](fonctionnel.md)
 - [W3C Validator HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Foc07.youcodeuse.com%2F)
 - [W3C Validator CSS](https://jigsaw.w3.org/css-validator/validator?uri=oc07.youcodeuse.com%2Fassets%2Findex-CvhUzz6K.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr) 
-- In
+- Benchmark JS 🚀 [https://jsben.ch/jmsPO](https://jsben.ch/jmsPO)
+
 
 ## Upgrade `[Optionnel]`
 
@@ -58,6 +59,35 @@ A JavaScript project for OpenClassrooms **REACT** course AKA Project 7 PETITS PL
 - View-transition()
 - text-wrap:pretty()
 - light-dark() **May 2024**
+- Add `Benchmark`library 
+
+````
+npm install benchmark
+````
+
+EXAMPLE 
+````
+const Benchmark = require('benchmark');
+const suite = new Benchmark.Suite;
+
+// Ajouter des tests
+suite.add('RegExp#test', function() {
+  /o/.test('Hello World!');
+})
+.add('String#indexOf', function() {
+  'Hello World!'.indexOf('o') > -1;
+})
+// Ajouter un listener pour les événements de cycle
+.on('cycle', function(event) {
+  console.log(String(event.target));
+})
+// Ajouter un listener pour les événements de complétion
+.on('complete', function() {
+  console.log('Le test le plus rapide est ' + this.filter('fastest').map('name'));
+})
+// Lancer les tests de manière asynchrone
+.run({ 'async': true });
+````
 
 ![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/nephcode-public/githubReadmeSkills.png)
 Since Pyramids from future road to final temple
