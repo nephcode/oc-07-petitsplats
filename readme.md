@@ -47,11 +47,17 @@ A JavaScript project for OpenClassrooms **REACT** course AKA Project 7 PETITS PL
 
 👩🏼‍💻 Once upon a time, a dev girl took a new project ...7 Petits plats because i love sugar, daddy
 
+- Speed algo test 🐢  [Performance test](fonctionnel.md)
+- [W3C Validator HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Foc07.youcodeuse.com%2F)
+- [W3C Validator CSS](https://jigsaw.w3.org/css-validator/validator?uri=oc07.youcodeuse.com%2Fassets%2Findex-CvhUzz6K.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr) 
+- In
+
 ## Upgrade `[Optionnel]`
+
 - Animation-range()
 - View-transition()
 - text-wrap:pretty()
-- light-dark() __May 2024__
+- light-dark() **May 2024**
 
 ![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/nephcode-public/githubReadmeSkills.png)
 Since Pyramids from future road to final temple

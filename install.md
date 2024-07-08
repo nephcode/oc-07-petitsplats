@@ -24,8 +24,6 @@ bun create vite petits-plats --template vanilla
 ```
 
 
-
-
 ````
 bun install
 ````
@@ -33,3 +31,11 @@ bun install
 ````
 bun run dev
 ````
+
+## PRODUCTION
+This project manage with **NPM** and **Github Action** 
+*No Release auto iteration*
+*Branch release* (without pull request)
+
+Default config `package-lock.json`, `.nojekyll`
+

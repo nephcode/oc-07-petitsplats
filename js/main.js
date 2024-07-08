@@ -87,10 +87,12 @@ const updateRecipes = () => {
     //console.log(data.value);
     if (data.length === 0) {
         recipesContainer.innerHTML = `<div class="zero">Il n'y a pas de recettes avec la recherche en cours<br> ${data.length} recettes</div>`
+        //updateRecipes();
     }
     else{
         displayRecipes(data)
     }   
+    inputCleaner(cleanInputMain, "click", mainSearchBar);
     //displayDeleteButton(mainSearchBar.value)
     updateRecipesCounter(data)
     
@@ -121,7 +123,7 @@ const displayDeleteButton = value => {
  * Update DOM receipes in function of data in param
  * @param {*} data 
  */
-const displayRecipes = data => {
+export const displayRecipes = data => {
     recipesContainer.innerHTML = ''
 
     data.forEach(item => {
