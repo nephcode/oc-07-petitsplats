@@ -33,6 +33,11 @@ import {
   
 } from "./components/domLinker";
 
+// API  ===========================================================//
+import {
+    colorg
+  } from "./components/tools";
+
 // SEARCH =========================================================//
 import { filterByTags,  } from "./components/search";
 
@@ -42,7 +47,7 @@ import { createItem, inputCleaner } from "./models/dropdown";
 import { state } from "./components/state";
 // APP ============================================================//
 
-console.log(getRecipes());
+console.table(getRecipes());
 //console.log(data);
 /*
 const displayDeleteCategoryButton = (value, category) => {
@@ -99,7 +104,7 @@ const updateRecipes = () => {
     applyCategorySearch('ingredients')
     applyCategorySearch('devices')
     applyCategorySearch('ustensils')
-    console.log('state.tags:', JSON.stringify(state.tags, null, 2))
+    console.table(state.tags);
 }
 
 const updateRecipesCounter = data => {

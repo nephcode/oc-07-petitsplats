@@ -51,6 +51,7 @@ A JavaScript project for OpenClassrooms **REACT** course AKA Project 7 PETITS PL
 - [W3C Validator HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Foc07.youcodeuse.com%2F)
 - [W3C Validator CSS](https://jigsaw.w3.org/css-validator/validator?uri=oc07.youcodeuse.com%2Fassets%2Findex-CvhUzz6K.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr) 
 - Benchmark JS 🚀 [https://jsben.ch/jmsPO](https://jsben.ch/jmsPO)
+- Upgrade .log message : table, perf and `COLORG`
 
 
 ## Upgrade `[Optionnel]`
