@@ -48,8 +48,8 @@ export const createTag = (data, category, callback) => {
 }
 
 // CLEAN INPUT ====================================================//
-export const inputCleaner = (element, trigger, target ) =>{
-    element.style.display = 'none';
+export const inputCleaner = (element, trigger, target, callback) =>{
+    //element.style.display = 'none';
     target.addEventListener('input', () => { // Utilisation de 'input' pour détecter chaque saisie
         if (target.value.length >= 3) {
             element.style.display = 'flex'; // Afficher l'élément si la longueur est >= 3
@@ -62,9 +62,8 @@ export const inputCleaner = (element, trigger, target ) =>{
         target.value = '';
         element.style.display = 'none';
         console.log("Clean : " + target.id);
-        //updateRecipes();
+        callback();
     });
-    
 }
 
 // DELETE TAG ====================================================//

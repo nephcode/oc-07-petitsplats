@@ -76,13 +76,13 @@ const applyCategorySearch = category => {
     //displayDeleteCategoryButton(ingredientsSearchBar.value, 'ingredients')
     //displayDeleteCategoryButton(devicesSearchBar.value, 'devices')
     //displayDeleteCategoryButton(ustensilsSearchBar.value, 'ustensils')
-    inputCleaner(cleanInputMain, "click", mainSearchBar);
-    inputCleaner(deleteIngredientsSearchBar, "click", ingredientsSearchBar);
-    inputCleaner(deleteDevicesSearchBar, "click", devicesSearchBar);
-    inputCleaner(deleteUstensilsSearchBar, "click", ustensilsSearchBar);
+    inputCleaner(cleanInputMain, "click", mainSearchBar, updateRecipes);
+    inputCleaner(deleteIngredientsSearchBar, "click", ingredientsSearchBar,updateRecipes);
+    inputCleaner(deleteDevicesSearchBar, "click", devicesSearchBar, updateRecipes);
+    inputCleaner(deleteUstensilsSearchBar, "click", ustensilsSearchBar, updateRecipes);
 }
 
-
+// UPDATE RECIPES ===============================================//
 const updateRecipes = () => {
     const data = getRecipes(mainSearchBar.value)
     //display ZERO recipes
@@ -110,12 +110,7 @@ const updateRecipes = () => {
 const updateRecipesCounter = data => {
     recipesCounter.innerHTML = `${data.length} recettes`
 }
-/*
-const updateRecipesZero = data => {
 
-    recipesContainer.innerHTML = `Il n'y a pas de recettes avec la recherche en cours ${data.length} recettes`
-}
-*/
 /**
  * Display or not delete button of main search bar in function of main search bar value in param
  * @param {String} value main searchbar value
@@ -137,14 +132,23 @@ export const displayRecipes = data => {
     })
 }
 
+console.time('OC07 API ARRY');
 updateRecipes()
-
 mainSearchBar.addEventListener('input', updateRecipes)
+console.timeEnd('OC07 API ARRY'); 
 /*
 deleteMainSearchBar.addEventListener('click', () => {
     mainSearchBar.value = ''
     updateRecipes()
 })
+*/
+/*
+// INPUT CLEANER ================================= NEPH =============//
+inputCleaner(cleanInputMain, "click", mainSearchBar, updateRecipes);
+inputCleaner(deleteIngredientsSearchBar, "click", ingredientsSearchBar, updateRecipes);
+inputCleaner(deleteDevicesSearchBar, "click", devicesSearchBar, updateRecipes);
+inputCleaner(deleteUstensilsSearchBar, "click", ustensilsSearchBar, updateRecipes);
+//===================================================================//
 */
 
 dropdownIngredients.addEventListener('click', () => {
@@ -189,12 +193,7 @@ deleteUstensilsSearchBar.addEventListener('click', () => {
 
 
 
-// INPUT CLEANER ================================= NEPH =============//
-inputCleaner(cleanInputMain, "click", mainSearchBar);
-inputCleaner(deleteIngredientsSearchBar, "click", ingredientsSearchBar);
-inputCleaner(deleteDevicesSearchBar, "click", devicesSearchBar);
-inputCleaner(deleteUstensilsSearchBar, "click", ustensilsSearchBar);
-//===================================================================//
+
 
 /*
 class App {
