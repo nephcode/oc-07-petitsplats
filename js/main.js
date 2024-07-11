@@ -42,8 +42,10 @@ import { createItem, inputCleaner } from "./models/dropdown";
 import { state } from "./components/state";
 // APP ============================================================//
 
-console.log(getRecipes());
+//console.table(getRecipes());
 //console.log(data);
+
+// SEARCH VALUE LIMITER ===========================================//
 /*
 const displayDeleteCategoryButton = (value, category) => {
     const deleteCategoryButton = document.querySelector(`#dropdown-${category} .delete`)
@@ -77,46 +79,29 @@ const applyCategorySearch = category => {
     inputCleaner(deleteUstensilsSearchBar, "click", ustensilsSearchBar);
 }
 
-
+// UPDATE RECIPES ================================================//
 const updateRecipes = () => {
     const data = getRecipes(mainSearchBar.value)
-    //display ZERO recipes
-
-    //console.log(data.length);
-    //console.log(data);
-    //console.log(data.value);
+    //
     if (data.length === 0) {
         recipesContainer.innerHTML = `<div class="zero">Il n'y a pas de recettes avec la recherche en cours<br> ${data.length} recettes</div>`
     }
     else{
         displayRecipes(data)
     }   
-    //displayDeleteButton(mainSearchBar.value)
     updateRecipesCounter(data)
-    
     applyCategorySearch('ingredients')
     applyCategorySearch('devices')
     applyCategorySearch('ustensils')
-    console.log('state.tags:', JSON.stringify(state.tags, null, 2))
+    console.table(state.tags);
 }
 
+// UPDATE RECIPES COUNTER ========================================//
 const updateRecipesCounter = data => {
     recipesCounter.innerHTML = `${data.length} recettes`
 }
-/*
-const updateRecipesZero = data => {
 
-    recipesContainer.innerHTML = `Il n'y a pas de recettes avec la recherche en cours ${data.length} recettes`
-}
-*/
-/**
- * Display or not delete button of main search bar in function of main search bar value in param
- * @param {String} value main searchbar value
- */
-const displayDeleteButton = value => {
-    deleteMainSearchBar.style.display = value.length > 0 ? 'flex' : 'none'
-}
-
+// DISPLAY RECIPES ===============================================//
 /**
  * Update DOM receipes in function of data in param
  * @param {*} data 
@@ -129,17 +114,15 @@ const displayRecipes = data => {
         recipesContainer.appendChild(card)
     })
 }
-
+//************** */
 updateRecipes()
+//************** */
 
+// SEARCH BAR UPDATE =============================================//
 mainSearchBar.addEventListener('input', updateRecipes)
-/*
-deleteMainSearchBar.addEventListener('click', () => {
-    mainSearchBar.value = ''
-    updateRecipes()
-})
-*/
+//mainSearchBar.value = '' ? updateRecipes() : null;
 
+// DROPDOWN ======================================================//
 dropdownIngredients.addEventListener('click', () => {
     dropdownIngredients.classList.toggle('down')
     dropdownIngredientsCollapsed.style.display = dropdownIngredients.classList.contains('down') ? 'flex' : 'none'
@@ -179,15 +162,14 @@ deleteUstensilsSearchBar.addEventListener('click', () => {
     applyCategorySearch('ustensils')
 })
 
-
-
-
 // INPUT CLEANER ================================= NEPH =============//
 inputCleaner(cleanInputMain, "click", mainSearchBar);
-inputCleaner(deleteIngredientsSearchBar, "click", ingredientsSearchBar);
-inputCleaner(deleteDevicesSearchBar, "click", devicesSearchBar);
-inputCleaner(deleteUstensilsSearchBar, "click", ustensilsSearchBar);
+//inputCleaner(deleteIngredientsSearchBar, "click", ingredientsSearchBar);
+//inputCleaner(deleteDevicesSearchBar, "click", devicesSearchBar);
+//inputCleaner(deleteUstensilsSearchBar, "click", ustensilsSearchBar);
 //===================================================================//
+
+// END HERE //////////////////////////////////////////////// NEPH ===//
 
 /*
 class App {

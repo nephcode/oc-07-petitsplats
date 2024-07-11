@@ -74,8 +74,9 @@ export const filterMainSearchBar = (recipes, value) => recipes.filter(item =>
     isLowerCaseIncluded(item.name, value) ||
     isFound(item.ingredients, 'ingredient', value))
 */
-
+console.time('perfOC07');
 export const filterMainSearchBar = (recipes, value) => {
+   
     const startTime = performance.now();
     const result = []
     // 1st step: Loop on each recipes
@@ -88,11 +89,13 @@ export const filterMainSearchBar = (recipes, value) => {
             result.push(recipe)
         }
     }
+    //for (let oc07 = 0 ; oc07 < 100000; oc07++) {}
     const endTime = performance.now();
-    console.log("getIngredients Execution Time:", (endTime - startTime).toFixed(10), "ms");
+    console.log("getIngredients Execution Time:", (endTime - startTime).toFixed(20), "ms");
+    
     return result
 }
-
+console.timeEnd('perfOC07');
 
 
 const isRecipeIncludesEveryTagIngredient = (recipe, tags) => tags.ingredients.every(ingredient => recipe.ingredients.map(elem => elem.ingredient).includes(ingredient))

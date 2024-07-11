@@ -29,7 +29,6 @@ export const createTag = (data, category, callback) => {
     if (!state.tags[category].find(element => element === data)) {
 
         state.tags[category].push(data)
-
         const article = document.createElement('article')
         const span = document.createElement('span')
         span.innerHTML = data
@@ -37,18 +36,15 @@ export const createTag = (data, category, callback) => {
         const img = document.createElement('img')
         img.src = '/images/common/cross.svg'
         img.alt = 'supprimer le tag'
-
         img.addEventListener('click', () => deleteTag(article, data, category, callback))
-
         article.appendChild(img)
-
         tagContainer.appendChild(article)
         callback();
     }
 }
 
 // CLEAN INPUT ====================================================//
-export const inputCleaner = (element, trigger, target ) =>{
+export const inputCleaner = (element, trigger, target) =>{
     element.style.display = 'none';
     target.addEventListener('input', () => { // Utilisation de 'input' pour détecter chaque saisie
         if (target.value.length >= 3) {
@@ -63,6 +59,8 @@ export const inputCleaner = (element, trigger, target ) =>{
         element.style.display = 'none';
         console.log("Clean : " + target.id);
     });
+    // update all display
+    //callback();
 }
 
 // DELETE TAG ====================================================//
@@ -70,6 +68,7 @@ export const deleteTag = (tagElement, data, category, callback) => {
     tagElement.parentNode.removeChild(tagElement)
     state.tags[category] = state.tags[category].filter(item => item !== data)
     // update all display
+    console.log("Delete TAG");
     callback()
 }
 // 2024 ==========================================================//    
