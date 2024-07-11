@@ -29,6 +29,7 @@ const isFound = (array, property, value) => array.find(item => isLowerCaseInclud
  * @param {String} value - String to search
  * @returns Array of object of recipes
  */
+
 export const filterMainSearchBar = (recipes, value) => recipes.filter(item =>
     isLowerCaseIncluded(item.description, value) ||
     isLowerCaseIncluded(item.name, value) ||
