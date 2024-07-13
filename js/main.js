@@ -97,7 +97,7 @@ const updateRecipes = () => {
     else{
         displayRecipes(data)
     }   
-    inputCleaner(cleanInputMain, "click", mainSearchBar);
+    inputCleaner(cleanInputMain, "click", mainSearchBar, updateRecipes);
     //displayDeleteButton(mainSearchBar.value)
     updateRecipesCounter(data)
     
