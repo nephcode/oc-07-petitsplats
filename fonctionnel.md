@@ -4,7 +4,7 @@
 
 ## PROBLÉMATIQUE
 
-Comparer deux formulations algorithimique entre les fonctions d'**API** vanilla et le constructeur **FOR** dans la recherche d'affichage
+Comparer deux formulations algorithimique **en Performance** entre les fonctions d'**API** vanilla et le constructeur **FOR** dans la recherche d'affichage
 
 ### API VANILLA SUR ARRAY
 
