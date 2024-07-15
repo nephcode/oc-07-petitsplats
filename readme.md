@@ -90,7 +90,6 @@ suite.add('RegExp#test', function() {
 .run({ 'async': true });
 ````
 
-![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/nephcode-public/githubReadmeSkills.png)
-Since Pyramids from future road to final temple
+![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/oc-react/readme-footer-oc-react-07.png)
 
 <!-- ∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵∴∵  ∵ NPƸӜƷL1M ∴ ∴∵∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴∵ ƸӜƷ ∴ -->
